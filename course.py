@@ -1,3 +1,5 @@
+# this file contains the class definition of the Course class
+
 class Course:
     def __init__(self, name="", instructor="", credits=4, preReq="", details = "", teeA=[], textbook="" \
     , evaluation="", numStudents=0, status="", cost=0, courseId=""):
@@ -35,7 +37,7 @@ class Course:
     def setCost(self, cost):
         self.cost = cost
     # getter methods
-    def getCourseInfo(self):
+    def printCourseInfo(self):
         print("*" * 20 + "\n" + \
         "Course Name:", self.name + "\n" + \
         "_" * 20 + "\n" + \
@@ -55,3 +57,9 @@ class Course:
         "_" * 20 + "\n" + \
         "Cost: ", str(self.cost) + "\n" + \
         "*" * 20)
+
+    def getCourseId(self):
+        return self.courseId
+
+    def getCourseCost(self):
+        return self.cost
